@@ -11,8 +11,8 @@ read AUTHOR
 sed "s/CyComponent/$NAME/g" package.json > p.new
 mv p.new package.json
 
-sed "s/CyComponent/$NAME/g" webpack.config > w.new
-mv w.new webpack.config
+sed "s/CyComponent/$NAME/g" webpack.config.js > w.new
+mv w.new webpack.config.js
 
 sed "s/CyComponent/$NAME/g" src/CyComponent.js > c.new
 mv c.new src/CyComponent.js
