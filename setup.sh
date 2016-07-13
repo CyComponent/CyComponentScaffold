@@ -8,18 +8,18 @@ read DESCRIPTION
 echo "Please enter the author's name: "
 read AUTHOR
 
-sed -i "s/CyComponent/$NAME/g" package.json webpack.config.js src/CyComponent.js
+sed -i -e "s/CyComponent/$NAME/g" package.json webpack.config.js src/CyComponent.js
 
-sed -i "s/sample_name/$REGISTRATION/g" src/CyComponent.js
+sed -i -e "s/sample_name/$REGISTRATION/g" src/CyComponent.js
 
 mv src/CyComponent.js src/${NAME}.js
 mv src/component/CyComponent.jsx src/component/${NAME}.jsx
 
 mv ../CyComponentScaffold ../$NAME
 
-sed -i "s/DESCRIPTION/$DESCRIPTION/g" package.json
+sed -i -e "s/DESCRIPTION/$DESCRIPTION/g" package.json
 
-sed -i "s/AUTHOR/$AUTHOR/g" package.json
+sed -i -e "s/AUTHOR/$AUTHOR/g" package.json
 
 echo "Removing git source control for this repo..."
 echo ""
@@ -27,6 +27,6 @@ echo "Please run | npm install | to install dependancies. You can can then build
 echo "with | npm run build | (You will need to install npm globally for both of these."
 echo "The build target is build/${NAME}.js"
 
-rm -r .git
+rm -rf .git
 
 rm -- "$0"
