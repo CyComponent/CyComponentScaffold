@@ -14,11 +14,11 @@ mv p.new package.json
 sed "s/CyComponent/$NAME/g" webpack.config > w.new
 mv w.new webpack.config
 
-sed "s/CyComponent/$NAME/g" src/CyComponent > c.new
-mv c.new src/CyComponent
+sed "s/CyComponent/$NAME/g" src/CyComponent.js > c.new
+mv c.new src/CyComponent.js
 
-sed "s/sample_name/$REGISTRATION/g" src/CyComponent > c.new
-mv c.new src/CyComponent 
+sed "s/sample_name/$REGISTRATION/g" src/CyComponent.js > c.new
+mv c.new src/CyComponent.js
 
 mv src/CyComponent.js src/${NAME}.js
 mv src/component/CyComponent.jsx src/component/${NAME}.jsx
