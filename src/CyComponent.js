@@ -3,31 +3,17 @@ import { connect } from 'react-redux'
 
 import CyComponent from './component/CyComponent'
 
-import sample, * as sampleActions from './store/sample'
-
-require("./style/component.scss")
+import "./style/component.scss"
 
 function mapStateToProps(state) {
   return {}
 }
 
 function mapDispatchToProps(dispatch) {
-  return {
-    sampleActions: bindActionCreators(sampleActions, dispatch)
-  }
+  return {}
 }
 
-const component = connect(
-    mapStateToProps,
-    mapDispatchToProps
-  )(CyComponent)
-
-const storeName = 'sample_name'
-const store = { sample }
-
-export {
-  component,
-  storeName,
-  store,
-  sampleActions
-}
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(CyComponent)
